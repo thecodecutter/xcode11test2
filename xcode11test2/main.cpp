@@ -11,7 +11,11 @@
 struct User {
     std::string first_name;
     std::string last_name;
-    std::string status;
+    std::string get_status() {
+        return status;
+    }
+    private:
+        std::string status = "Gold";
 };
 
 int main(int argc, const char * argv[]) {
@@ -19,11 +23,11 @@ int main(int argc, const char * argv[]) {
     User me;
     me.first_name = "Nick";
     me.last_name = "Lansbury";
-    me.status = "Gold";
+    // me.status = "Gold";   <-- Can't use now that access modifier of property is now private. Use getter instead.
     
     std::cout << "First name: " << me.first_name << std::endl;
     std::cout << "Last name: " << me.last_name << std::endl;
-    std::cout << "Status: " << me.status <<std::endl;
+    std::cout << "Status: " << me.get_status() <<std::endl;
     
     
     // Finish off here...
