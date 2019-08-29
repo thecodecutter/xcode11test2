@@ -8,8 +8,25 @@
 
 #include <iostream>
 
+struct User {
+    std::string first_name;
+    std::string last_name;
+    std::string status;
+};
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
+    
+    User me;
+    me.first_name = "Nick";
+    me.last_name = "Lansbury";
+    me.status = "Gold";
+    
+    std::cout << "First name: " << me.first_name << std::endl;
+    std::cout << "Last name: " << me.last_name << std::endl;
+    std::cout << "Status: " << me.status <<std::endl;
+    
+    
+    // Finish off here...
     std::cout << "Hello lovely C++ World! This was originally coded using XCode 10.3\n\n\n";
     // Update 29/08/2019 I set the following to make this work in the XCode 11 beta
     // Nicks-MacBook-Air:~ nicklansbury$ sudo xcode-select --switch '/Applications/Xcode-beta.app'
